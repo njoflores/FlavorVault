@@ -1,0 +1,152 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f1fa; /* Light lavender background */
+    color: #333; /* Dark text color */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #6a4c93; /* Purple background */
+    color: white;
+    padding: 15px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Menu Button */
+#menu-toggle {
+    background-color: #6a4c93;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#menu-toggle:hover {
+    background-color: #4a3a69; /* Darker lavender */
+}
+
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    top: 70px; /* Start below the header */
+    left: -250px; /* Hidden by default */
+    width: 250px;
+    height: calc(100% - 70px); /* Full height excluding header */
+    background-color: #6a4c93; /* Purple background */
+    color: white;
+    z-index: 999;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+#sidebar.open {
+    left: 0; /* Show sidebar */
+}
+
+#sidebar nav ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+#sidebar nav ul li {
+    margin-bottom: 15px;
+}
+
+#sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#sidebar nav ul li a:hover {
+    background-color: #4a3a69; /* Darker lavender */
+}
+
+/* Close Button */
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Main Content */
+#main-content {
+    margin-top: 90px; /* Adjust for header */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+    min-height: 100vh; /* Ensure content spans full viewport height */
+}
+
+#main-content.shifted {
+    margin-left: 250px; /* Shift content for open sidebar */
+}
+
+/* Navigation Section */
+.navigation-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.nav-card {
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-card div {
+    padding: 20px;
+    background-color: #6a4c93;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-card:hover div {
+    transform: scale(1.05);
+    background-color: #4a3a69; /* Darker lavender */
+}
+
+/* Footer */
+footer {
+    background-color: #6a4c93; /* Purple background */
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    position: relative; /* Ensure footer doesn’t overlap */
+    margin-top: 20px;
+}

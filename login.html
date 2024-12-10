@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <button id="menu-toggle">☰ Menu</button>
+        <h1>Login Portal</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <button id="close-btn">&times;</button>
+        <nav>
+            <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="videos_gallery.html">Gallery</a></li>
+      <li><a href="login.html">Log-In</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="Recipes.html">Recipes</a></li>
+      <li><a href="methods.html">Cooking Methods</a></li>
+      <li><a href="regional.html">Regional Recipes</a></li>
+      <li><a href="beverages.html">Beverages</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <form id="login-form">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Enter Username" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <button type="button" id="login-btn">Login</button>
+            <p id="login-error" style="color: red; display: none;">Invalid username or password!</p>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 FlavorVault | Designed with 💜</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Sidebar toggle
+        const menuToggle = document.getElementById("menu-toggle");
+        const sidebar = document.getElementById("sidebar");
+        const closeBtn = document.getElementById("close-btn");
+
+        menuToggle.addEventListener("click", () => {
+            sidebar.classList.add("open");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.remove("open");
+        });
+
+        // Login validation
+        const loginButton = document.getElementById("login-btn");
+        const errorMessage = document.getElementById("login-error");
+
+        loginButton.addEventListener("click", () => {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "IIT406" && password === "LETRAN") {
+                alert("Login successful!");
+                // Redirect or proceed further
+                window.location.href = "About.html"; // Example redirect
+            } else {
+                errorMessage.style.display = "block"; // Show error message
+            }
+        });
+    </script>
+</body>
+</html>

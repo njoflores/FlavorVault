@@ -1,0 +1,183 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f1fa; /* Light lavender background */
+    color: #333; /* Dark text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    top: 50px; /* Start below the header */
+    left: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: #6a4c93;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 999;
+    padding-top: 20px; /* Space out content a little more */
+    border-right: 5px solid #4a3a69;
+}
+
+#sidebar.open {
+    left: 0; /* Show the sidebar when the 'open' class is added */
+}
+
+#sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar nav ul li {
+    padding: 15px;
+}
+
+#sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#sidebar nav ul li a:hover {
+    background-color: #4a3a69; /* Darker lavender for hover */
+}
+
+/* Close Button */
+#close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #6a4c93;
+    color: white;
+    padding: 15px;
+    z-index: 1000; /* Keeps the header above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Title */
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center; /* Center the title text */
+    flex-grow: 1; /* Allow the title to take available space */
+    font-size: 24px;
+}
+
+/* Menu Button */
+#menu-toggle {
+    padding: 10px 20px;
+    background-color: #6a4c93;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    left: 20px; /* Menu button on the left */
+}
+
+#menu-toggle:hover {
+    background-color: #4a3a69;
+}
+
+/* Main Content */
+#main-content {
+    margin-top: 70px; /* Add margin to ensure the content doesn't hide under the fixed header */
+    transition: margin-left 0.3s ease;
+}
+
+/* Shift main content when sidebar is open */
+#main-content.shifted {
+    margin-left: 250px; /* Shift the content to the right when the sidebar is open */
+}
+
+/* Footer */
+footer {
+    background-color: #6a4c93;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Contact Form */
+#contact-form {
+    margin: 70px 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact-form h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #6a4c93;
+    margin-bottom: 20px;
+}
+
+#contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #6a4c93;
+    border-radius: 5px;
+}
+
+#contact-form textarea {
+    height: 150px;
+}
+
+#contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6a4c93;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #4a3a69;
+}

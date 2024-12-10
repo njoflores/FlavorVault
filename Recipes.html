@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes - FlavorVault</title>
+    <link rel="stylesheet" href="css/Recipes.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside id="sidebar">
+    <button id="close-btn">X</button>
+        <nav>
+            <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="videos_gallery.html">Gallery</a></li>
+      <li><a href="login.html">Log-In</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="Recipes.html">Recipes</a></li>
+      <li><a href="methods.html">Cooking Methods</a></li>
+      <li><a href="regional.html">Regional Recipes</a></li>
+      <li><a href="beverages.html">Beverages</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Header with Menu Button -->
+        <header>
+            <button id="menu-toggle">Menu</button>
+            <h1>FlavorVault</h1>
+        </header>
+
+        <!-- Filters Section -->
+        <section id="filters" class="filters">
+            <h2>Filter Recipes</h2>
+
+            <div class="filter-options">
+                <label for="cuisine">Cuisine:</label>
+                <select id="cuisine">
+                    <option value="">None</option>
+                    <option value="french">French</option>
+                    <option value="korean">Korean</option>
+                    <option value="italian">Italian</option>
+                    <option value="philippine">Philippine</option>
+                    <option value="japanese">Japanese</option>
+                </select>
+
+                <label for="meal-type">Meal Type:</label>
+                <select id="meal-type">
+                    <option value="">None</option>
+                    <option value="appetizers">Appetizers</option>
+                    <option value="desserts">Desserts</option>
+                    <option value="meals">Lunch</option>
+                    <option value="snacks">Snacks</option>
+                </select>
+
+                <label for="cooking-method">Cooking Method:</label>
+                <select id="cooking-method">
+                    <option value="">None</option>
+                    <option value="grilling">Grilling</option>
+                    <option value="baking">Baking</option>
+                    <option value="frying">Frying</option>
+                    <option value="slow-cooking">Slow Cooking</option>
+                </select>
+
+                <label for="season">Season:</label>
+                <select id="season">
+                    <option value="">None</option>
+                    <option value="summer">Summer</option>
+                    <option value="winter">Winter</option>
+                </select>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search recipes...">
+            </div>
+
+            <!-- Filter Reset Button -->
+            <button id="reset-filters">Reset Filters</button>
+        </section>
+
+        <!-- Recipe Cards Section -->
+        <div class="recipe-cards">
+
+            <!-- FRENCH RECIPES -->
+            <a href="recipes/oeufs-mimosa.html" class="recipe-card" 
+               data-cuisine="french" 
+               data-meal-type="appetizers" 
+               data-cooking-method="grilling" 
+               data-season="summer">
+                <img src="images/Oeufs-Mimosa-16.png" alt="French-style Deviled Eggs">
+                <h3>French-style Deviled Eggs (Oeufs Mimosa)</h3>
+            </a>
+            <a href="recipes/gougeres.html" class="recipe-card">
+                <img src="images/2643_w1944h1242c1cx1908cy2861.jpg" alt="French Cheese Puffs with paprika and chives garnish">
+                <h3>French Cheese Puffs (Gougères)</h3>
+            </a>
+            <a href="recipes/vonnas.html" class="recipe-card">
+                <img src="images/Potato-Pancakes-from-Vonnas-3.webp" alt="">
+                <h3>Potato Pancakes from Vonnas</h3>
+            
+            <a href="recipes/beer-braised.html" class="recipe-card">
+                <img src="images/Beer-Braised-Spiced-Pork-Shanks-15-scaled (1).webp" alt="">
+                <h3>Beer-Braised Spiced Pork Shanks</h3>
+            </a>
+            <a href="recipes/rogail.html" class="recipe-card">
+                <img src="images/Sausage-Rougail-18-scaled (1).webp" alt="">
+                <h3>Sausage Rougail (Creole Sausage Stew)</h3>
+            </a>
+            <a href="recipes/marble-cake.html" class="recipe-card">
+                <img src="images/marble-cake-22.webp" alt="">
+                <h3>Chocolate Vanilla Marble Cake (Gâteau marbré)</h3>
+            </a>
+
+            <!-- KOREAN RECIPES -->
+            <a href="recipes/kimchi.html" class="recipe-card">
+                <img src="images/2.-Kimchi-Pancake-Kimchi-Buchimgae.jpg" alt="">
+                <h3>Kimchi Pancakes</h3>
+            </a>
+            <a href="recipes/fried-rice.html" class="recipe-card">
+                <img src="images/1.webp" alt="">
+                <h3>Spam and Radish Kimchi Fried Rice</h3>
+            </a>
+            <a href="recipes/manbingsu.html" class="recipe-card">
+                <img src="images/mango-bingsu.webp" alt="">
+                <h3>Mango Bingsu (Mango Shaved Ice)</h3>
+            </a>
+            <a href="recipes/kimchi-egg.html" class="recipe-card">
+                <img src="images/korean-kimchi-scrambled-eggs-final-1.jpg" alt="">
+                <h3>Kimchi Scrambled Eggs</h3>
+            </a>
+            <a href="recipes/japchae.html" class="recipe-card">
+                <img src="images/Japchae-Recipe-1.webp" alt="">
+                <h3>Japchae (Korean Noodle Stir-Fry)</h3>
+            </a>
+            <a href="recipes/tteokbokki.html" class="recipe-card">
+                <img src="images/tteokbokki.webp" alt="">
+                <h3>Tteokbokki (Spicy Rice Cakes)</h3>
+            </a>
+
+
+            <!-- ITALIAN RECIPES -->
+            </a>
+            <a href="recipes/pandoro.html" class="recipe-card">
+                <img src="images/thumb_5180_1200_670_0_0_auto.jpg" alt="">
+                <h3>Mini Salmon Pandoro Club Sandwich</h3>
+            </a>
+            <a href="recipes/panettones.html" class="recipe-card">
+                <img src="images/thumb_5618_1200_670_0_0_auto.jpg" alt="">
+                <h3>Mini Pear Panettones with Mulled Wine Sauce</h3>
+            </a>
+            <a href="recipes/bolognese.html" class="recipe-card">
+                <img src="images/thumb_6648_1200_670_0_0_auto.jpg" alt="">
+                <h3>Tagliatelle alla Bolognese</h3>
+            </a>
+            <a href="recipes/penne.html" class="recipe-card">
+                <img src="images/thumb_6996_1200_670_0_0_auto.jpg" alt="">
+                <h3>Penne With Mozzarella, Red Peppers and Capers</h3>
+            </a>
+            <a href="recipes/ricotta.html" class="recipe-card">
+                <img src="images/thumb_6506_1200_670_0_0_auto.jpg" alt="">
+                <h3>Ricotta Cheese Tortelloni With Butter and Sage</h3>
+            </a>
+            <a href="recipes/shakerato.html" class="recipe-card">
+                <img src="images/thumb_6718_1200_670_0_0_auto.jpg" alt="">
+                <h3>Cocoa Caffè Shakerato</h3>
+            </a>
+
+            <!-- JAPANESE RECIPES -->
+            </a>
+            <a href="recipes/basque.html" class="recipe-card">
+                <img src="images/IMG_7801-2-1024x683.jpeg" alt="">
+                <h3>Basque Cheesecake</h3>
+            </a>
+            <a href="recipes/onigiri.html" class="recipe-card">
+                <img src="images/IMG_4092-1024x768.jpeg
+" alt="">
+                <h3>Onigiri Bento Lunch</h3>
+            </a>
+            <a href="recipes/sandwich.html" class="recipe-card">
+                <img src="images/IMG_3064-1024x576.jpg" alt="">
+                <h3>Egg and Mayo Toast</h3>
+            </a>
+            <a href="recipes/kimbap.html" class="recipe-card">
+                <img src="images/IMG_4056-1-1024x768.jpeg" alt="">
+                <h3>Kimbap</h3>
+            </a>
+            <a href="recipes/potato-rice.html" class="recipe-card">
+                <img src="images/IMG_5262-1024x768.jpeg" alt="">
+                <h3>Satsumaimo Gohan (Japanese Sweet Potato Rice)</h3>
+            </a>
+            <a href="recipes/genmaicha.html" class="recipe-card">
+                <img src="images/IMG_8231-1024x683.jpeg" alt="">
+                <h3>Genmaicha Latte Recipe</h3>
+            </a>
+
+            <!-- FILIPINO RECIPES -->
+            </a>
+            <a href="recipes/lumpia.html" class="recipe-card">
+                <img src="images/crispy-lumpiang-shanghai-768x1024.jpg" alt="">
+                <h3>Lumpia Shanghai</h3>
+            </a>
+            <a href="recipes/creamy.html" class="recipe-card">
+                <img src="images/creamy-chicken-salad-sandwich-spread-6-768x1024.jpg
+" alt="">
+                <h3>Chicken Salad Sandwich Spread</h3>
+            </a>
+            <a href="recipes/menudo.html" class="recipe-card">
+                <img src="images/Filipino-menudo-768x1024.jpg" alt="">
+                <h3>Filipino Menudo</h3>
+            </a>
+            <a href="recipes/wonton.html" class="recipe-card">
+                <img src="images/beef-wonton-mami-1-1-768x1024.jpg" alt="">
+                <h3>Beef Wonton Mami</h3>
+            </a>
+            <a href="recipes/scrambled.html" class="recipe-card">
+                <img src="images/filipino-scrambled-eggs-3-768x1024.jpg" alt="">
+                <h3>Filipino Scrambled Eggs</h3>
+            </a>
+            <a href="recipes/graham.html" class="recipe-card">
+                <img src="images/fruit-cocktail-graham-cake-768x1024.jpg" alt="">
+                <h3>Fruit Cocktail Graham Float</h3>
+            </a>
+        </div>
+
+    </main>
+
+    <script src="js/Recipes.js"></script>
+</body>
+</html>

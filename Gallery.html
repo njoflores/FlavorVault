@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <h1>Flores, Norman Joshua J.</h1>
+            </div>
+        </header>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="Carousel.html">Carousel</a></li>
+                <li><a href="About.html">About ME!</a></li>
+                <li><a href="#">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- Carousel Section -->
+            <div class="carousel">
+                <h2 class="section-title">MY PICTURES</h2>
+                <div class="carousel-images">
+                    <img src="images/Carousel1.jpg" alt="Image 1">
+                    <img src="images/415883992_10226354131660572_5925631225213250961_n.jpg" alt="Image 2">
+                    <img src="images/415792068_10226354131220561_4624999848186853878_n.jpg" alt="Image 3">
+                    <img src="images/270036459_10220537831062459_7053504930713030888_n.jpg" alt="Image 4">
+                    <img src="images/unnamed_8.jpg" alt="Image 5">
+                    <img src="images/IMG_20240929_163044_213.jpg" alt="Image 6">
+                    <img src="images/IMG_20230506_094415.jpg" alt="Image 7">
+                    <img src="images/IMG_7587.jpg" alt="Image 8">
+                    <img src="images/62339613_2705089129505625_7921616150071345152_n.jpg" alt="Image 9">
+                    <img src="images/IMG_20240929_163036_156.jpg" alt="Image 10">
+                </div>
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
+            </div>
+
+            <!-- YouTube Videos Section -->
+            <div class="video-gallery">
+                <h2 class="section-title">VIDEOS I OFTEN WATCH</h2>
+                <div class="videos">
+                    <iframe src="https://www.youtube.com//embed/Q-nWA0WeF98" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com//embed/aR-KAldshAE" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/F5tSoaJ93ac" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/XTIYpx5zfOI" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Flores, Norman Joshua J. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript for Carousel -->
+    <script>
+        const carousel = document.querySelector('.carousel-images');
+        const images = document.querySelectorAll('.carousel-images img');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        let counter = 0;
+        const size = images[0].clientWidth; // Get the width of the first image
+
+        nextButton.addEventListener('click', () => {
+            if (counter >= images.length - 1) return; // Prevent moving past the last image
+            carousel.style.transition = "transform 0.5s ease-in-out";
+            counter++;
+            carousel.style.transform = 'translateX(' + (-size * counter) + 'px)'; // Move to the next image
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (counter <= 0) return; // Prevent moving past the first image
+            carousel.style.transition = "transform 0.5s ease-in-out";
+            counter--;
+            carousel.style.transform = 'translateX(' + (-size * counter) + 'px)'; // Move to the previous image
+        });
+    </script>
+</body>
+</html>

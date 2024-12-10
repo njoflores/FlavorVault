@@ -1,0 +1,220 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f1fa; /* Light lavender background */
+    color: #333; /* Dark text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    top: 50px; /* Start below the header */
+    left: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: #6a4c93;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 999;
+    padding-top: 20px; /* Space out content a little more */
+    border-right: 5px solid #4a3a69;
+}
+
+#sidebar.open {
+    left: 0; /* Show the sidebar when the 'open' class is added */
+}
+
+#sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar nav ul li {
+    padding: 15px;
+}
+
+#sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#sidebar nav ul li a:hover {
+    background-color: #4a3a69; /* Darker lavender for hover */
+}
+
+
+/* Close Button */
+#close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #6a4c93;
+    color: white;
+    padding: 15px;
+    z-index: 1000; /* Keeps the header above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center; /* Center the title text */
+    flex-grow: 1; /* Allow the title to take available space */
+    font-size: 24px;
+}
+
+/* Menu Button */
+#menu-toggle {
+    padding: 10px 20px;
+    background-color: #6a4c93;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#menu-toggle:hover {
+    background-color: #4a3a69;
+}
+
+/* Filters Section */
+#filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#filters h2 {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #6a4c93;
+}
+
+/* Filter options */
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+.filter-options select {
+    padding: 10px;
+    border: 1px solid #6a4c93; /* Lavender border for dropdowns */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Filter Reset Button */
+#reset-filters {
+    background-color: #6a4c93;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset-filters:hover {
+    background-color: #4a3a69;
+}
+
+/* Recipe Cards Section */
+.recipe-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.recipe-card {
+    width: calc(33% - 20px);
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe-card h3 {
+    color: #6a4c93;
+}
+
+.recipe-card img {
+    width: 100%;        /* Ensure image takes up full width */
+    height: 400px;      /* Fixed height for all images */
+    object-fit: cover;  /* Ensure the image covers the area without distorting */
+    border-radius: 10px;
+    margin-bottom: 15px; /* Space between the image and the text */
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+}
+
+/* Main Content */
+#main-content {
+    margin-top: 70px; /* Add margin to ensure the content doesn't hide under the fixed header */
+    transition: margin-left 0.3s ease;
+}
+
+/* Shift main content when sidebar is open */
+#main-content.shifted {
+    margin-left: 250px; /* Shift the content to the right when the sidebar is open */
+}
+
+#load-more {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #7a5c8d; /* Adjust color as needed */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#load-more:hover {
+  background-color: #6b4d7f; /* Adjust hover effect */
+}
+
+/* Hide extra recipes initially */
+.recipe-card.hidden {
+    display: none;
+}

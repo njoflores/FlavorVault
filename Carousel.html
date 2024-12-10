@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="css/carousel.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <h1>Flores, Norman Joshua J.</h1>
+            </div>
+        </header>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="Carousel.html">Carousel</a></li>
+                <li><a href="About.html">About ME!</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="carousel">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="carousel-container">
+                    <div class="carousel-item">
+                        <a href="About.html"><img src="images/Carousel1.jpg" alt="Graduation Ball from 2023"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="About.html"><img src="images/Carousel2.jpg" alt="Image 2"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="About.html"><img src="images/Carousel3.jpg" alt="Image 3"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="About.html"><img src="images/Carousel4.jpg" alt="Image 4"></a>
+                    </div>
+                </div>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </main>
+
+     <footer>
+        <p>&copy; 2024 Flores, Norman Joshua J. All Rights Reserved.</p>
+    </footer>
+
+        <!-- JavaScript to make the carousel work -->
+        <script>
+            let slideIndex = 0;
+            const slides = document.querySelectorAll('.carousel-item'); // Select individual carousel items
+            const totalSlides = slides.length; // Total number of slides
+
+            function showSlides() {
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.style.display = 'none'; 
+                });
+                // Display the current slide
+                slides[slideIndex].style.display = 'block'; 
+            }
+
+            function moveSlide(direction) {
+                slideIndex += direction;
+                if (slideIndex < 0) {
+                    slideIndex = totalSlides - 1; // Go to the last image
+                } else if (slideIndex >= totalSlides) {
+                    slideIndex = 0; // Go back to the first image
+                }
+                showSlides(); // Show the updated slide
+            }
+
+            // Initialize the first slide
+            showSlides();
+        </script>
+    </div>
+</body>
+</html>

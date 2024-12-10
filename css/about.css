@@ -1,0 +1,201 @@
+body {
+    font-family: poppins;
+    background-color: #e6e6fa; /* Light lavender */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px; /* Width limit */
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #72008c; /* Background color for header */
+    color: white; /* Text color */
+}
+
+header h1 {
+    margin: 0; /* Removes default margin */
+    text-align: center; /* Centers title horizontally */
+    padding: 20px 0; /* Adds padding above and below the title */
+}
+
+nav {
+    display: flex; /* Enables flexbox layout for navigation */
+    justify-content: center; /* Centers navigation items */
+    background-color: #333; /* Background color for navigation */
+    padding: 10px 0; /* Adds padding above and below the nav */
+}
+
+nav ul {
+    list-style-type: none; /* Removes bullets from the list */
+    padding: 0; /* Removes padding */
+    margin: 0; /* Removes margin */
+    display: flex; /* Enables flexbox for horizontal layout */
+}
+
+nav li {
+    margin: 0 15px; /* Adds spacing between navigation items */
+}
+
+nav a {
+    color: #ffcc00; /* Link color (same as mood table headers) */
+    text-decoration: none; /* Removes underline */
+    font-size: 14px; /* Smaller font size for navigation links */
+}
+
+nav a:hover {
+    color: #ff9900; /* Changes color on hover (same as mood table hover) */
+}
+
+h2, h3, h4 {
+    color: #34495e;
+}
+
+.classes-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.major-subjects, .minor-subjects {
+    width: 48%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th {
+    background-color: #72008c; /* Purple background */
+    color: white; /* Keeps white font color for table headers */
+    padding: 10px;
+    text-align: center; /* Center align header text */
+}
+
+td {
+    text-align: center;
+    padding: 10px;
+}
+
+td img {
+    max-width: 100px;
+    border-radius: 5px;
+}
+
+#myMoods {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#myMoods th {
+    background-color: #72008c; /* Purple background for mood table */
+    color: #ffcc00; /* Keeps font color for mood table headers */
+    padding: 10px;
+    text-align: center; /* Center align header text */
+}
+
+#myMoods td {
+    text-align: center;
+    padding: 10px;
+}
+
+footer {
+    background-color: #72008c; /* Purple background for footer */
+    color: white; /* White text color */
+    text-align: center; /* Center-aligns footer content */
+    padding: 10px 0; /* Adds padding above and below the footer */
+    position: relative; /* Positions the footer relative */
+    bottom: 0; /* Ensures footer is at the bottom */
+    width: 100%; /* Full width for footer */
+}
+
+a {
+    color: #ffcc00; /* Better color for links */
+    text-decoration: none; /* Removes underline */
+}
+
+a:hover {
+    color: #ff9900; /* Changes color on hover */
+}
+
+.contact-info a {
+    color: #007bff; /* Change to a more visible color */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-info a:hover {
+    color: #0056b3; /* Darker shade for hover effect */
+    text-decoration: underline; /* Add underline on hover for emphasis */
+}
+
+.education-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrapping of items to new lines */
+    margin: 20px 0; /* Adds margin above and below the container */
+}
+
+.school {
+    width: 23%; /* Adjust width to fit four items side by side */
+    background-color: #f9f9f9; /* Light background for the school boxes */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding inside each school box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px; /* Margin below each school box */
+    text-align: center; /* Center-aligns text */
+}
+
+.school img {
+    max-width: 100%; /* Responsive image size */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+.skills-list {
+    list-style-type: none; /* Removes bullets */
+    padding: 0; /* Removes padding */
+    margin: 20px auto; /* Centers the list horizontally */
+    font-size: 16px; /* Adjusts font size */
+    color: #34495e; /* Sets text color */
+    text-align: center; /* Aligns text to the center */
+    max-width: 600px; /* Optional: limits the width for better readability */
+}
+
+/* Hobbies Section */
+.hobbies-section {
+    margin: 40px auto;
+    text-align: center;
+    max-width: 960px;
+}
+
+.hobbies-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.hobby-item {
+    margin: 20px;
+    text-align: center;
+}
+
+.hobby-item img {
+    max-width: 150px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.hobby-item p {
+    font-size: 16px;
+    color: #34495e;
+}
